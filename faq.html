@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="AetherSX2 FAQ">
+    <meta name="description" content="AetherSX2 FAQ">
+    <title>AetherSX2 FAQ</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topnav">
+        <a class="logo" href="./index.html"><img src="./img/logo.png" alt=" "></a>
+        <a href="./faq.html">FAQ</a>
+        <a href="https://www.aethersx2.com/archive/">Download</a>
+        <p>|</p>
+        <a href="https://discord.com/invite/JZ7BkeEdrJ"><i class="fab fa-discord"></i></a>
+        <a href="https://www.patreon.com/aethersx2"><i class="fab fa-patreon"></i></a>
+        <a href="https://mobile.twitter.com/tahlreth"><i class="fab fa-twitter"></i></a>
+        <p>|</p>
+        <a class="theme"><i class="fas fa-adjust"></i></a>
+    </div>
+
+    <div class="contents">
+        <h4><span>Contents</span></h4>
+        <a href="#01">• Getting the app</a><br>
+        <a href="#02">• Hardware requirements</a><br>
+        <a href="#03">• User expectations</a><br>
+        <a href="#04">• Using the BIOS</a><br>
+        <a href="#05">• Getting games, compression</a><br>
+        <a href="#06">• Slowdowns and lag</a><br>
+        <a href="#07">• Improving game performance</a><br>
+        <a href="#08">• Adding buttons/sticks</a><br>
+        <a href="#09">• Customizing the touch controller</a><br>
+        <a href="#10">• Landscape/portrait switching</a><br>
+        <a href="#11">• Using bluetooth controllers</a><br>
+        <a href="#12">• Using game-specific settings</a><br>
+        <a href="#13">• Add game-specific button layouts</a><br>
+        <a href="#14">• Creating macro/combo buttons</a><br>
+        <a href="#15">• Fixing rendering glitches</a><br>
+        <a href="#16">• Using/creating multiple savestates</a><br>
+        <a href="#17">• Importing memcards and all saves</a><br>
+        <a href="#18">• save/app-data location</a><br>
+        <a href="#19">• Adding covers to the game grid</a><br>
+        <a href="#20">• Creating launcher shortcuts</a><br>
+        <a href="#21">• Software renderer performance</a><br>
+        <a href="#22">• Using affinity control</a><br>
+    </div>
+
+    <div class="text-container" id="01">
+        <div class="text-item">
+            <h4><span>How do I get the app?</span></h4>
+            <p>
+                <span>Google Play:</span> We recommend installing the app from Google Play. 
+                This ensures we receive any crash reports, and you are automatically updated to the latest version.
+            </p><br>
+            <div class="link-container">
+                <i class="fab fa-google-play"></i>
+                <a href="https://play.google.com/store/apps/details?id=xyz.aethersx2.android">Google Play Store</a>
+            </div><br><br>
+            <p>
+                <span>APK Download:</span> Since December 28, 2021 you can download an APK version of AetherSX2 if your device does not support Google Play.
+                We do not recommend the APK installation. You should use the Play Store link to ensure you have the latest version. <br><br>
+                Additionally, no community support will be provided for users who install from APK.
+                If your device is not supported in the Play Store version, it is likely too slow to run AetherSX2.
+            </p><br>
+            <div class="link-container">
+                <i class="fas fa-archive"></i>
+                <a href=" https://www.aethersx2.com/archive/">Archive</a>
+            </div><br><br>
+            <p>
+                <span>General Update Notes:</span><br>
+                1. There are glitches in the Vulkan renderer after the update: Some Adreno drivers are broken. 
+                Turn on the "Disable Texture Barriers" option in Advanced Settings to revert to the old behavior. <br><br>
+                2. My performance got worse: Reset settings. Make sure texture preloading is enabled, and conservative buffer allocation is also enabled.
+            </p><br>
+        </div><div class="tag" id="02"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>What are the requirements?</span></h4>
+            <p>
+                The console is an extremely complex piece of hardware, with many very powerful components, even for today. 
+                Due to differences between the console hardware and your phone's hardware, they are computationally expensive to simulate.
+                You need a high end device to achieve good performance. <br><br>
+
+                We recommend at least a Snapdragon 845-equivalent device. This means 4 large cores (Cortex-A75 level). 
+                If you only have two big cores (e.g. Snapdragon 700 series SoCs), you should not enable multi-threaded VU, and performance will suffer as a result. <br><br>
+                Devices with Mali or PowerVR GPUs will run the app, but performance will be lower than Adreno GPUs.
+                If you want to use the app on a slower device, you can try it, but games will run slow, especially heavier titles.
+            </p><br>
+        </div><div class="tag" id="03"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>What should my expectations be?</span></h4>
+            <p>
+                This is a free app, worked on as a hobby in the developers' free time. 
+                At the time of writing, it is in very early stages and missing many useful features, however is usable for playing some games. <br><br>
+
+                It is not going to be perfect, far from it. 
+                We will continue to improve it when we have time, but please remember this is not our jobs, and to have realistic expectations, <span>especially if you do not have a high end device.</span> <br><br>
+
+                AetherSX2 will always be free, and will never contain ads. If you have been forced to pay or watch ads to play games, you should get your money back.
+            </p><br>
+        </div><div class="tag" id="04"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>Is a BIOS required?</span></h4>
+            <p>
+                Yes, it is. A BIOS image is required to play games and is not optional.
+                This image should be dumped from your own console, using a homebrew application.
+                There are plenty of guides available online on how to dump your console's BIOS.
+            </p><br>
+        </div><div class="tag" id="05"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>Where do I get games?</span></h4>
+            <p>
+                AetherSX2 should only be used to play games you own and have dumped from disc yourself. 
+                To dump your games, you can use a tool such as ImgBurn to create a .iso for the disc, and then copy across it to your device over USB. <br><br>
+                Optionally, you can use compression tools such as gzip or chdman to further reduce the size.
+            </p><br>
+        </div><div class="tag" id="06"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>My games are running slow / are laggy!</span></h4>
+            <p>
+                Different games have very different hardware requirements, due to how much they utilized the various components of the console. See the next section.
+            </p><br>
+        </div><div class="tag" id="07"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I improve game performance?</span></h4>
+            <p>
+                • Use the Vulkan renderer, <span>especically if you have a Mali GPU.</span> Note that some games may perform better with OpenGL. <br><br>
+                • Underclock the emulated CPU by setting the cycle rate to a negative number, and cycle skip to a positive number in System settings. <br><br>
+                • If the game slows down depending on the camera angle, this may be due to GS downloads, which are very slow on mobile GPUs. <br>
+                &nbsp;&nbsp;You can try disabling hardware readbacks in Graphics options, but this may create some glitches in effects. <br><br>
+                • You can try switching the SPU2 mixing mode to Async Mix instead of Timestretch. But this is not compatible with all games. <br><br>
+                • For some devices (e.g. Samsung and Pixel), using affinity control can improve performance consistency. See the affinity control section below. <br><br>
+                • Reducing blending accuracy can improve performance in some games, at the cost of broken visuals. <br><br>
+                • <span>If you have bad performance after an update, reset settings.</span> Sometimes we change settings to more performant defaults.
+            </p><br>
+        </div><div class="tag" id="08"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I add L3/R3 buttons and the right analog stick?</span></h4>
+            <p>
+                Open Controller Settings while ingame, by pausing and tapping the controller icon in the top-right corner.
+                Select "Add/Remove" buttons for L3/R3, and/or change the control layout to dual sticks.
+            </p><br>
+        </div><div class="tag" id="09"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I customize the touchscreen controller (position/scale)?</span></h4>
+            <p>
+                Press the pause or back button while ingame, and tap the controls tab in the top-right corner. 
+                You can also add additional buttons for hotkeys here, e.g. fast forward, quick load/save, etc.
+            </p><br>
+        </div><div class="tag" id="10"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>The app opens in portrait mode, how do I change it to landscape?</span></h4>
+            <p>
+                Turn your device around if you have auto rotation enabled. You can also force it to always use landscape in the first page of App Settings.
+            </p><br>
+        </div><div class="tag" id="11"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>My Bluetooth controller isn't working!</span></h4>
+            <p>
+                Map the controller in "Controller Settings". You can start with the automatic mapping, but sometimes triggers or sticks still need to be mapped manually.
+            </p><br>
+        </div><div class="tag" id="12"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How can I use different settings for each game?</span></h4>
+            <p>
+                Long press the game in the game list/grid, tap Game Properties, and tap the Game Settings tab. 
+                If you want to change these settings while in-game, open the pause menu, and tap the info button in the top-right corner to access Game Properties.
+            </p><br>
+        </div><div class="tag" id="13"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How can I set up a different touchscreen button layout for different games?</span></h4>
+            <p>
+                AetherSX2 now has "input profiles", which are a grouping of the touchscreen button layout, as well as Bluetooth controller bindings. To create an input profile: <br><br>
+                1. Configure the touchscreen buttons in the layout you desire (optional). <br>
+                2. Bind the bluetooth controller with the configuration you desire, and set up any macro buttons (optional). <br>
+                3. Save this as an input profile. In Controller Settings, there is a "Save Profile" option in the first tab. <br>
+                4. Optionally, reset the touchscreen layout back to default (also in the same menu). <br><br>
+                You can load this profile manually when you want to use it, but you can also automatically load the profile for specific games. To do so: <br><br>
+                1. Open Game Properties for the game you want to use the profile for (either ingame or from the game list). <br>
+                2. Swipe across to the General tab. <br>
+                3. Tap "Input Profile", and select the profile you wish to use. <br>
+                4. The profile will be automatically loaded when the game starts. When switching to another game, the layout will revert to the global setting.
+            </p><br>
+        </div><div class="tag" id="14"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>I want to create macro, or "combo" buttons.</span></h4>
+            <p>
+                You get 4 macro buttons per virtual controller: <br><br>
+                1. Open Controller Settings <br><br>
+                2. Swipe to the controller port you wish to create the macro for (usually Port 1). <br><br>
+                3. Scroll down to the Macro category, and tap the one-of-four button you wish to customize. <br><br>
+                4. Optionally, set a trigger for the macro button. This can be a button on your phone (e.g. volume), a controller button, a combination of controller buttons, etc. Or, leave it empty if you want to activate it with the touchscreen. <br><br>
+                5. Choose a combination of buttons that you wish the macro to activate. You can select any combination of face buttons, stick directions, etc. For example, Cross + Right Stick Up (RUp). <br><br>
+                6. The frequency setting determines how often the macro will toggle in frames. If you just want a combo button, leave the frequency at zero/default. Otherwise, it will simulate repeatedly releasing/pressing the button at the frequency you choose. In other words, it automates button mashing! <br><br>
+                7. Tap out of the popup, or press the back button to leave the macro setup. <br><br>
+                8. Optionally, enable the touchscreen button for the macro. They are hidden by default. This is in Controller Settings -> Add/Remove Buttons, and pick Macro 1 through 4. You must be ingame to add the button. The buttons will appear as M1 through M4.
+            </p><br>
+        </div><div class="tag" id="15"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>My games have rendering glitches.</span></h4>
+            <p>
+                Due to the complexity of the console's hardware, there are still plenty of issues which arise when using the hardware renderer.
+                You can try using the software renderer for these games.
+            </p><br>
+        </div><div class="tag" id="16"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>I want to save more than one state.</span></h4>
+            <p>
+                Open the pause menu and tap Load/Save state, there are 10 slots + a quick save (for onscreen buttons).
+            </p><br>
+        </div><div class="tag" id="17"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>I want to copy my saves from another device.</span></h4>
+            <p>
+                Currently you can only import an entire memory card at once; it is not possible to import individual saves. <br><br>
+                Swiping from the left in the game list will show an “Import Memory Card” option which you can use to import a *.ps2 image of a memory card.
+            </p><br>
+        </div><div class="tag" id="18"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>Where are my saves located?</span></h4>
+            <p>
+                Due to scoped storage on Android 11+, we cannot place your saves in a normal directory on external storage.
+                However, with a file explorer app, you should be able to access the <storepath>Android/data/xyz.aethersx2.android</storepath> directory, in your primary storage volume, which contains your save states and memory cards. <br><br>
+                Note that accessing this directory requires granting additional permissions to your file manager on Android 11+.
+            </p><br>
+        </div><div class="tag" id="19"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I add covers to the game grid?</span></h4>
+            <p>
+                Place cover images in the covers directory, located in the data directory mentioned above, with the file name as the game title or serial in jpg/png format. <br><br>
+                Alternatively, you can long press in the game list and select “Choose Cover Image” to import an image.
+            </p><br>
+        </div><div class="tag" id="20"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I create launcher shortcuts for games?</span></h4>
+            <p>
+                Long press the game in the game list, and select “Create Launcher Shortcut”.
+            </p><br>
+        </div><div class="tag" id="21"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How to improve software renderer performance?</span></h4>
+            <p>
+                The software renderer draws everything onscreen using the CPU instead of the GPU, which is very slow in comparison. 
+                However, the software renderer's performance has now been improved to the point where it's usable for many games. <br><br>
+                Assuming you have a device with 4 big cores, you'll want to <span>disable multi-threaded VU</span> to free up one of your big cores, and the software rendering threads to 2.
+                You can then enable affinity control (to any mode), which will also pin the software threads to the big cores. <br><br>
+                If you have a device with only 2 big cores, the software renderer will never perform well; the small cores are much too slow for rasterization.
+            </p><br>
+        </div><div class="tag" id="22"></div><br><br>
+
+        <div class="text-item">
+            <br>
+            <h4><span>How do I use affinity control?</span></h4>
+            <p>
+                For some devices (e.g. Samsung and Pixel), using affinity control can improve performance consistency.
+                By enabling this option, the CPU cores in your device are sorted from most powerful to least powerful, and the threads pinned to these cores in the order you select, to avoid the scheduler constantly moving them around. <br><br>
+                1. EE Thread <span>(Emotion Engine)</span> - This thread is responsible for most of the game logic, as well as VU0, DMA, etc. In most games, it is the most heavy thread. <br><br>
+                2. GS Thread <span>(Graphics Synthesizer)</span> - This thread is responsible for receiving packets from the EE and VU1, analyses them, and generates draw commands for the host GPU for rendering. 
+                In some games, particularly those which are draw call heavy, it can be the most heavy. <br><br>
+                3. VU Thread <span>(Vector Unit 1)</span> - This thread handles execution of VU1 microprograms, which provide similar functionality to modern GPU's vertex shaders. 
+                It is usually the lightest thread, but in some games (e.g. God of War), it can actually be the heaviest, due to complex microprograms and/or synchronization. This thread is only active when MTVU is enabled. <br><br>
+                The best setting will depend on your device and the game, hence why it is settable per-game. 
+                If you're experiencing massive frame rate variance, where it bounces around with a range of more than 20fps, experimenting with this option may help. <br><br>
+                Use the "Show CPU Usage" option in graphics to work out which thread is the heaviest/second heaviest, and then choose the corresponding affinity control mode.
+                Devices with equal big/little core distribution likely won't need to use this option.
+            </p><br>
+        </div><br>
+    </div><br>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <p class="title">
+                        <span>AetherSX2</span>A Playstation 2 Emulator for ARM devices. <br>
+                    </p>
+                    <p class=legal>
+                        PlayStation 2 and PS2 are registered trademarks of Sony Interactive Entertainment Europe Limited and in other regions.
+                        This app is not affiliated in any way with Sony Interactive Entertainment.
+                        Google Play and the Google Play logo are trademarks of Google LLC.
+                    </p>
+                    <hr>
+                    <div class="col item social">
+                        <a href="https://discord.com/invite/JZ7BkeEdrJ"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.patreon.com/aethersx2"><i class="fab fa-patreon"></i> </a>
+                        <a href="https://mobile.twitter.com/tahlreth"><i class="fab fa-twitter"></i> </a>
+                        <a href="https://github.com/Stellarsand/www-aethersx2"><i class="fab fa-github"></i> </a>
+                    </div>
+                </div>
+                <p class="copyright">© 2022 AetherSX2</p>
+                <div class="localize">
+                    <a href="https://crowdin.com/?utm_source=badge&utm_medium=referral&utm_campaign=badge-add-on" rel="nofollow"><img style="width:130;height:30px" src="https://badges.crowdin.net/badge/dark/crowdin-on-light.png" srcset="https://badges.crowdin.net/badge/dark/crowdin-on-light.png 1x,https://badges.crowdin.net/badge/dark/crowdin-on-light@2x.png 2x"  alt="Crowdin | Agile localization for tech companies" /></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>
