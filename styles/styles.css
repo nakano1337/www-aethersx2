@@ -24,7 +24,7 @@
 .light-mode {
   --color-primary: #edf2f5;
   --color-secondary: #4f72e7;
-  --color-tertiary: #d6d29d;
+  --color-tertiary: #bbb567;
   --color-white: #000000;
   --color-black: rgb(231, 222, 222);
   --color-grey-0: #f8f8f8;
@@ -143,6 +143,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .topnav {
@@ -176,13 +177,13 @@ body {
 .topnav a {
   color: var(--color-grey-1);
   text-align: center;
-  padding: 8px 8px;
+  padding: 8px 6px;
   font-size: 14px;
   font-weight: bold;
 }
 
 .topnav a .fa-discord {
-  color: #9063f8;
+  color: #6665d2;
 }
 
 .topnav a .fa-patreon {
@@ -227,38 +228,15 @@ body {
 .footer-dark .legal {
   font-size: .75rem;
   padding-bottom: 1.5rem;
-  max-width: 800px;
+  max-width: 1150px;
   display: inline-block;
-}
-
-.footer-dark .item.social {
-  text-align: center;
-}
-
-.footer-dark .item.social > a {
-  font-size: 16px;
-  padding-top: 1.5rem;
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  text-align: center;
-  margin: 0 4px;
-  opacity: 1;
-}
-
-.footer-dark .item.social > a .fab {
-  color: var(--color-grey-2);
-}
-
-.footer-dark .item.social > a:hover {
-  opacity: 0.8;
 }
 
 .footer-dark .copyright {
   font-weight: bold;
   text-align: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: var(--color-grey-3);
   font-size: 13px;
   margin-bottom: 0;
@@ -271,7 +249,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 1rem;
 }
 
 .gallery-container .gallery {
@@ -286,32 +263,6 @@ body {
 }
 
 .gallery-container .gallery img {
-  width: 100%;
-  height: auto;
-}
-
-.gallery-container-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 12rem;
-}
-
-.gallery-container-bottom .gallery {
-  margin: 10px;
-  border: 1px solid var(--color-grey-5);
-  float: left;
-  max-width: 500px;
-}
-
-.gallery-container-bottom .gallery:hover {
-  border: 1px solid var(--color-secondary);
-}
-
-.gallery-container-bottom .gallery img {
   width: 100%;
   height: auto;
 }
