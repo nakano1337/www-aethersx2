@@ -11,5 +11,8 @@
         <img src="https://img.shields.io/github/last-commit/bunnicash/www-aethersx2?style=flat-square">
     </a>
 </p>
-<p>AetherSX2 is an emulator of the PS Two console for ARM-based devices. This enables you to play games which you have dumped from disc on your smartphone.</p>
+
+- AetherSX2 is an emulator of the PS Two console for ARM-based devices. This enables you to play games which you have dumped from disc on your smartphone.
+- A development preview of the website is available at `https://bunnicash.github.io/www-aethersx2/`.
 <br>
+
