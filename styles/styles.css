@@ -22,7 +22,7 @@
 }
 
 .light-mode {
-  --color-primary: #edf2f5;
+  --color-primary: #d0d3d4;
   --color-secondary: #4f72e7;
   --color-tertiary: #bbb567;
   --color-white: #000000;
@@ -60,7 +60,7 @@ body {
   display: fixed;
   margin: auto;
   text-align: left;
-  padding-top: 8rem;
+  padding-top: 9rem;
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 1400px;
@@ -80,15 +80,11 @@ body {
   color: var(--color-grey-3);
 }
 
-.contents hr {
-  color: var(--color-grey-3);
-}
-
 .text-container {
   display: fixed;
   margin: auto;
   text-align: left;
-  padding-top: 8rem;
+  padding-top: 9rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border: 0px solid var(--color-secondary);
@@ -146,62 +142,134 @@ body {
   padding-bottom: 4rem;
 }
 
-.topnav {
+.header {
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: var(--color-grey-6);
-  overflow: hidden;
   position: fixed;
+  top: 0;
   width: 100%;
-  top: 0%;
-  border-bottom: 2px solid var(--color-secondary);
+  border-bottom: 3px solid var(--color-secondary);
 }
 
-.topnav img {
-  width: 45px;
-  height: 45px;
+.logo {
+  display: inline-block;
+  padding: .5rem;
+  color: var(--color-tertiary);
+  font-size: 40px;
+  margin-left: 1.25rem;
 }
 
-.topnav a {
-  opacity: 1;
-}
-
-.topnav a {
-  color: var(--color-grey-1);
-  text-align: center;
-  padding: 8px 6px;
-  font-size: 14px;
+.logo span {
+  position: fixed;
+  margin-top: .9rem;
+  font-size: 19px;
   font-weight: bold;
 }
 
-.topnav a .fa-discord {
+.logo img {
+  position: relative;
+  height: 30px;
+  border-radius: 0%;
+  padding-right: .25rem;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--color-grey-6);
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
+}
+
+.nav .menu {
+  padding-right: 1rem;
+}
+
+.menu a {
+  display: block;
+  padding: 25px 20px;
+  color: var(--color-grey-0);
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.menu a i {
+  color: var(--color-grey-3);
+  padding-right: 0.3rem;
+}
+
+.menu a .fa-discord {
   color: #6665d2;
 }
 
-.topnav a .fa-patreon {
+.menu a .fa-patreon {
   color: #c93f3f;
 }
 
-.topnav a .fa-twitter {
-  color: #44a9c2;
+.menu a:hover {
+  background-color: transparent;
+  opacity: 75%;
 }
 
-.topnav p {
-  padding: .5rem;
-  color: var(--color-grey-4);
+.menu a:hover i {
+  opacity: 90%;
 }
 
-.topnav a:hover {
-  opacity: 0.8;
-  color: var(--color-grey-2);
+.mobile-menu {
+  cursor: pointer;
+  float: right;
+  padding: 26px 28px;
+  color: var(--color-grey-0);
+}
+
+.mobile-menu i:hover {
+  opacity: 70%;
+}
+
+.use-side-menu {
+  display: none;
+}
+
+.use-side-menu:checked ~ nav {
+  max-height: 445px;
+  border-bottom: 3px solid var(--color-secondary);
+  padding-left: 1rem;
+}
+
+.use-side-menu:not(:checked) ~ nav {
+  padding-left: 1rem;
+}
+
+@media (min-width: 950px) {
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    opacity: 75%;
+  }
+  .menu a:hover i {
+    opacity: 90%;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .use-side-menu:checked ~ nav {
+    border-bottom: 0px solid var(--color-secondary);
+  }
 }
 
 .footer-dark {

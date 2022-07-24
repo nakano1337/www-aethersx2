@@ -16,21 +16,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="topnav">
-        <a class="logo" href="./index.html"><img src="./img/logo.png" alt=" "></a>
-        <a href="./faq.html">FAQ</a>
-        <a href="https://www.aethersx2.com/archive/">Download</a>
-        <p>|</p>
-        <a href="https://discord.com/invite/JZ7BkeEdrJ"><i class="fab fa-discord"></i></a>
-        <a href="https://www.patreon.com/aethersx2"><i class="fab fa-patreon"></i></a>
-        <p>|</p>
-        <a class="theme"><i class="fas fa-adjust"></i></a>
-        <a href="#"><i class="fas fa-chevron-up"></i></a>
-    </div>
+    <header class="header">
+        <a href="./index.html" class="logo"><img src="./img/logo.png" alt=" "><span>AetherSX2</span></a>
+        <input class="use-side-menu" type="checkbox" id="use-side-menu"/>
+        <label class="mobile-menu" for="use-side-menu"><i class="fas fa-bars"></i></label>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="./faq.html"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                <li><a href="https://www.aethersx2.com/archive/"><i class="fas fa-download"></i>Downloads</a></li>
+                <li><a href="https://www.patreon.com/aethersx2"><i class="fab fa-patreon"></i>Patreon</a></li>
+                <li><a href="https://discord.com/invite/JZ7BkeEdrJ"><i class="fab fa-discord"></i>Discord</a></li>
+                <li><a class="theme"><i class="fas fa-adjust"></i>Theme</a></li>
+                <li><a href="#"><i class="fas fa-chevron-circle-up"></i>Top</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="text-container">
         <div class="text-item">
-            <h4><span>AetherSX2</span></h4>
+            <h4><span>About the Project</span></h4>
             <p>
                 AetherSX2 is a free (no ads) emulator of the PS Two console for ARM-based devices. 
                 This enables you to play games which you have dumped from disc on your smartphone. 
