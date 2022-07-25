@@ -63,7 +63,7 @@ body {
   padding-top: 9rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  max-width: 1400px;
+  max-width: 90%;
 }
 
 .contents h4 {
@@ -89,7 +89,7 @@ body {
   padding-right: 2rem;
   border: 0px solid var(--color-secondary);
   border-radius: 0%;
-  max-width: 1400px;
+  max-width: 90%;
 }
 
 .text-container h4 {
@@ -313,7 +313,7 @@ body {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  max-width: 1400px;
+  max-width: 90%;
 }
 
 .media-header h4 {
@@ -336,7 +336,7 @@ body {
   padding: 0.5rem var(--_spacer) var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  max-width: 1350px;
+  max-width: 87.25%;
   margin: auto;
 }
 
