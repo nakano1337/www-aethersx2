@@ -140,25 +140,25 @@ body {
     position: fixed; // dont use sticky
     top: 0;
     width: 100%;
-    border-bottom: 3px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
 }
 .logo {
     display: inline-block;
-    padding: .5rem;
     color: var(--color-tertiary);
     font-size: 40px;
-    margin-left: 1.25rem;
+    margin-left: 1.7rem;
     span {
+        padding: .5rem;
         position: fixed;
-        margin-top: .9rem;
+        margin-top: 1rem;
         font-size: 19px;
         font-weight: bold;
     }
     img {
+        margin-top: 1rem;
         position: relative;
-        height: 30px;
+        height: 45px;
         border-radius: 0%;
-        padding-right: .25rem;
     }
 }
 .nav {
@@ -213,7 +213,7 @@ body {
 }
 .use-side-menu:checked ~ nav {
     max-height: 445px;
-    border-bottom: 3px solid var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
     padding-left: 1rem;
 }
 .use-side-menu:not(:checked) ~ nav {
@@ -312,7 +312,6 @@ body {
     padding: .5rem var(--_spacer) var(--_spacer);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
-    min-width: 850px;  // Maintain good mobile size
     max-width: 1350px;
     margin: auto;
 }
@@ -323,9 +322,6 @@ body {
     padding: var(--_spacer);
     background: var(--color-grey-6);
     border-radius: 1%;
-    .title {
-        color: var(--color-grey-0);
-    }
 }
 .media-element > img {
     inline-size: 100%;
@@ -340,3 +336,8 @@ body {
     scroll-snap-align: start;
 }
   
+@media (max-width: 700px) {  // Maintain good mobile size
+    .media-scroller {
+        grid-auto-columns: 80%;
+    }
+}
