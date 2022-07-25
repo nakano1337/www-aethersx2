@@ -191,7 +191,7 @@ body {
 
 .menu a {
   display: block;
-  padding: 25px 20px;
+  padding: 25px 10px;
   color: var(--color-grey-0);
   font-weight: bold;
   font-size: .9rem;
@@ -199,15 +199,6 @@ body {
 
 .menu a i {
   color: var(--color-grey-3);
-  padding-right: 0.3rem;
-}
-
-.menu a .fa-discord {
-  color: #6665d2;
-}
-
-.menu a .fa-patreon {
-  color: #c93f3f;
 }
 
 .menu a:hover {
@@ -237,7 +228,7 @@ body {
 .use-side-menu:checked ~ nav {
   max-height: 445px;
   border-bottom: 2px solid var(--color-secondary);
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .use-side-menu:not(:checked) ~ nav {
@@ -301,6 +292,10 @@ body {
   display: inline-block;
 }
 
+.footer-dark .localize {
+  padding-bottom: .2rem;
+}
+
 .footer-dark .copyright {
   font-weight: bold;
   text-align: center;
@@ -337,7 +332,7 @@ body {
   display: grid;
   gap: var(--_spacer);
   grid-auto-flow: column;
-  grid-auto-columns: 40%;
+  grid-auto-columns: 50%;
   padding: 0.5rem var(--_spacer) var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
